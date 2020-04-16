@@ -1,0 +1,164 @@
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gotu', sans-serif;
+}
+
+
+/* Header styling */
+
+header{
+    /*background: #DAE2F8;  /* fallback for old browsers */
+    /*background: -webkit-linear-gradient(to right, #D6A4A4, #DAE2F8);  /* Chrome 10-25, Safari 5.1-6 */
+   /* background: linear-gradient(to right, #D6A4A4, #DAE2F8); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    height: 35em;
+    border: none;
+    background: url(time.jpg) no-repeat center center/cover;
+    color: black;
+}
+
+/* navbar styling */
+.titleBar{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+
+
+}
+.titles> a{
+    padding: 0 2em ;
+    font-size: 2em;
+    text-decoration: none;
+    color: white;
+    
+}
+
+
+/* container styling */
+
+.container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    line-height: 0.2;
+    margin-top: 10rem;
+    border: 1px solid white;
+    border-radius: 12px;
+    height: 15rem;
+    width: 45rem;
+    margin-left: 20rem ;
+    
+}
+
+/* inputBar */
+
+.inputBar{
+    border: none;
+    border-radius: 15px;
+    height: 2.5rem;
+    width: 35rem;
+    color: black;
+}
+
+/* add icon */
+
+#addTask{
+    padding-left: 0.5rem;
+}
+
+/* content styling */
+#content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 2rem;
+    background: rgba(0,0,0,1);
+
+}
+#content >p{
+    display: flex;
+    flex-basis: 3;
+    flex-wrap: wrap;
+    padding: 2rem;
+    border: 3px solid rgb(87, 214, 165);
+    border-radius: 12px;
+    height: 10rem;
+    width: 20rem;
+    color: white;
+}
+
+@media only screen and (max-width: 1299px) {
+
+    .titleBar{
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .container{
+       margin:2em;
+       margin-top: 10rem;
+    }
+
+    #content{
+        display: grid;
+        grid-template-columns: 1fr; 
+    }
+
+    #content >p{
+        margin-left: 10rem;
+        border-style: dotted;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 750px){
+    .titles{
+        font-size: 12px;
+    }
+
+    .container{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        margin: 5px;
+        margin-top: 8em;
+    }
+    .container > h1{
+        font-size: 20px;
+        text-align: center;
+    }
+    .container > h3{
+        font-size: 15px;
+        text-align: center;
+    }
+
+    .inputBar{
+        width: 70%;
+        margin-left: 3.5rem;
+
+    }
+
+    #content{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    #content >p{
+        display: flex;
+        justify-content: center;
+        margin-left: 15px;
+        border-style: groove;
+        width: 70%;
+    }
+
+    .hidden{
+        text-align: center;
+        color: darkslategrey;
+        font-size: 8px;
+    }
+}
